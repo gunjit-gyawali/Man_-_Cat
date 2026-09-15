@@ -2,7 +2,7 @@ extends Node2D
 
 
 func _on_start_pressed() -> void:
-	Transtion.change_scene("res://scenes/vid.tscn")
+	Transtion.change_scene("res://scenes/world/vid.tscn")
 	
 
 

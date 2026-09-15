@@ -61,4 +61,4 @@ func advance_dialouge() -> void:
 		get_tree().paused = false
 		is_dailouge_active = false
 		dialouge_box.visible = false
-		get_tree().change_scene_to_file("res://scenes/character_selection.tscn")
+		get_tree().change_scene_to_file("res://scenes/world/character_selection.tscn")

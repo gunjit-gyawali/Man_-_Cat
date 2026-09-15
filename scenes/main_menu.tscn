@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://cy7j6c1dytp7p"]
+[gd_scene format=3 uid="uid://bog525j5byqvg"]
 
 [ext_resource type="Script" uid="uid://c3r5ej57mmo4d" path="res://scripts/main_menu.gd" id="1_8ln24"]
-[ext_resource type="Texture2D" uid="uid://cfe6ikbblbvuc" path="res://Assets/craftpix-781190-pixel-art-forest-platformer-tileset/Background/Bright/Background.png" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://cfe6ikbblbvuc" path="res://Assets/assets1/Background/Bright/Background.png" id="2_8ln24"]
 [ext_resource type="Script" uid="uid://qss24mslwnis" path="res://scripts/background.gd" id="2_ekxnf"]
 [ext_resource type="FontFile" uid="uid://b05u5gj7r1w1b" path="res://Assets/Main Menu/batmfa__.ttf" id="3_bqqt6"]
 [ext_resource type="FontFile" uid="uid://dsmjydxifjkwv" path="res://Assets/Main Menu/batmfo__.ttf" id="4_wu84c"]
@@ -47,13 +47,13 @@ script = ExtResource("1_8ln24")
 [node name="Background2" type="Sprite2D" parent="." unique_id=2028999594]
 position = Vector2(576.125, 324.25)
 scale = Vector2(1.1997397, 1.199074)
-texture = ExtResource("1_l6cm7")
+texture = ExtResource("2_8ln24")
 script = ExtResource("2_ekxnf")
 
 [node name="Background3" type="Sprite2D" parent="." unique_id=104320021]
 position = Vector2(-573.5, 324.00003)
 scale = Vector2(1.2, 1.199)
-texture = ExtResource("1_l6cm7")
+texture = ExtResource("2_8ln24")
 script = ExtResource("2_ekxnf")
 
 [node name="Panel" type="Panel" parent="." unique_id=2003583938]

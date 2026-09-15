@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://bg5dg4q4wdduu"]
+
+[ext_resource type="Texture2D" uid="uid://cfe6ikbblbvuc" path="res://Assets/assets1/Background/Bright/Background.png" id="1_72hpt"]
+[ext_resource type="Script" uid="uid://bjgkp8pgie1jg" path="res://scripts/character-selection-background.gd" id="1_l56u2"]
+[ext_resource type="FontFile" uid="uid://do3mcljd43b8e" path="res://Assets/fonts/Pixel Game.otf" id="4_cqj7k"]
+[ext_resource type="PackedScene" uid="uid://cv4liyxksxwlp" path="res://scenes/cat's/cat.tscn" id="5_7xed0"]
+[ext_resource type="PackedScene" uid="uid://ra1ovd8ee0rp" path="res://scenes/man's/girl.tscn" id="6_wh1ae"]
+[ext_resource type="FontFile" uid="uid://b05u5gj7r1w1b" path="res://Assets/Main Menu/batmfa__.ttf" id="7_iixut"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cfg4s"]
+distance = -480.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i08kd"]
+size = Vector2(80.75, 255.5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_o5bvq"]
+font = ExtResource("4_cqj7k")
+font_size = 68
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v724p"]
+bg_color = Color(0.43601397, 0.7051334, 0.55351, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.09239707, 0.09239706, 0.09239706, 0.6)
+shadow_size = 9
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7rsvw"]
+bg_color = Color(0.0245942, 0.41653258, 0.024844708, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.09239707, 0.09239706, 0.09239706, 0.6)
+shadow_size = 9
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y8tcv"]
+bg_color = Color(0.2470831, 0.5448225, 0.24583673, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.09239707, 0.09239706, 0.09239706, 0.6)
+shadow_size = 9
+shadow_offset = Vector2(1, 1)
+
+[node name="Character-Selection" type="Node2D" unique_id=1346005313]
+position = Vector2(-1, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1970858092]
+
+[node name="Background" type="Sprite2D" parent="StaticBody2D" unique_id=440023007]
+position = Vector2(258, 333)
+scale = Vector2(1.9833333, 1.4074074)
+texture = ExtResource("1_72hpt")
+script = ExtResource("1_l56u2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=372065851]
+shape = SubResource("WorldBoundaryShape2D_cfg4s")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=857671580]
+position = Vector2(1032, 364)
+shape = SubResource("RectangleShape2D_i08kd")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=717742235]
+position = Vector2(773, 361)
+shape = SubResource("RectangleShape2D_i08kd")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=114531355]
+position = Vector2(380, 361)
+shape = SubResource("RectangleShape2D_i08kd")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1191662634]
+position = Vector2(192, 362)
+shape = SubResource("RectangleShape2D_i08kd")
+
+[node name="Panel2" type="Panel" parent="." unique_id=59348020]
+offset_left = -15.0
+offset_top = -5.0
+offset_right = 1159.0
+offset_bottom = 653.0
+
+[node name="Name" type="Label" parent="." unique_id=152800440]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 292.0
+offset_top = 56.0
+offset_right = 876.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Select Your Character"
+label_settings = SubResource("LabelSettings_o5bvq")
+
+[node name="Cat" parent="." unique_id=73532615 instance=ExtResource("5_7xed0")]
+position = Vector2(767, 127)
+
+[node name="Girl" parent="." unique_id=1211583693 instance=ExtResource("6_wh1ae")]
+position = Vector2(85, 17)
+
+[node name="Start" type="Button" parent="." unique_id=570551343]
+offset_left = 189.0
+offset_top = 489.0
+offset_right = 389.0
+offset_bottom = 550.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_iixut")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_v724p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7rsvw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y8tcv")
+text = "Alice"
+
+[node name="Start2" type="Button" parent="." unique_id=1547432721]
+offset_left = 789.0
+offset_top = 487.0
+offset_right = 989.0
+offset_bottom = 548.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_iixut")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_v724p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7rsvw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y8tcv")
+text = "Ruby"
+
+[connection signal="pressed" from="Start" to="Start" method="_on_pressed"]
+[connection signal="pressed" from="Start2" to="Start2" method="_on_pressed"]
