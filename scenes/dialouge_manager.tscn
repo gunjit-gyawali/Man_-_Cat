@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bolufvcbl6w4f"]
+
+[ext_resource type="Script" uid="uid://byult17td3msy" path="res://scripts/dialouge_manager.gd" id="1_dmtt3"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dmtt3"]
+load_path = "res://.godot/imported/dialouge.png-12ef8455e1f4616d393ac99825c9100b.ctex"
+
+[sub_resource type="LabelSettings" id="LabelSettings_i08kd"]
+font_size = 50
+font_color = Color(0, 0.7509483, 0.7698625, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rde4v"]
+font_size = 24
+font_color = Color(1, 0.2400937, 1, 1)
+
+[node name="dialouge_manager" type="CanvasLayer" unique_id=2146652697]
+process_mode = 3
+script = ExtResource("1_dmtt3")
+
+[node name="Img" type="Sprite2D" parent="." unique_id=518165178]
+position = Vector2(557, 324.00003)
+scale = Vector2(0.71648216, 0.6695735)
+texture = SubResource("CompressedTexture2D_dmtt3")
+region_enabled = true
+region_rect = Rect2(0, 47.905952, 1626.8704, 1032.094)
+
+[node name="dialouge box" type="Control" parent="." unique_id=655718817]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="dialouge box" unique_id=1782577330]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -20.0
+offset_right = -21.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.83100003)
+
+[node name="Dialouge_Text" type="Label" parent="dialouge box" unique_id=1248926440]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 42.0
+offset_top = -10.0
+offset_right = 42.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "This is demo text"
+label_settings = SubResource("LabelSettings_i08kd")
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="." unique_id=1285878530]
+offset_left = 71.0
+offset_top = 589.0
+offset_right = 372.0
+offset_bottom = 623.0
+text = "Press Space to continue...."
+label_settings = SubResource("LabelSettings_rde4v")
