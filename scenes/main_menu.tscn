@@ -1,12 +1,10 @@
 [gd_scene format=3 uid="uid://cy7j6c1dytp7p"]
 
+[ext_resource type="Script" uid="uid://c3r5ej57mmo4d" path="res://scripts/main_menu.gd" id="1_8ln24"]
 [ext_resource type="Texture2D" uid="uid://cfe6ikbblbvuc" path="res://Assets/craftpix-781190-pixel-art-forest-platformer-tileset/Background/Bright/Background.png" id="1_l6cm7"]
 [ext_resource type="Script" uid="uid://qss24mslwnis" path="res://scripts/background.gd" id="2_ekxnf"]
 [ext_resource type="FontFile" uid="uid://b05u5gj7r1w1b" path="res://Assets/Main Menu/batmfa__.ttf" id="3_bqqt6"]
-[ext_resource type="Script" uid="uid://148jjpsgi6k6" path="res://scripts/start.gd" id="4_oa1go"]
 [ext_resource type="FontFile" uid="uid://dsmjydxifjkwv" path="res://Assets/Main Menu/batmfo__.ttf" id="4_wu84c"]
-[ext_resource type="Script" uid="uid://nua7l5t86csp" path="res://scripts/exit.gd" id="5_8ln24"]
-[ext_resource type="Script" uid="uid://dgees3us3s03k" path="res://scripts/settingss.gd" id="5_tbmy8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekxnf"]
 bg_color = Color(0.43601397, 0.7051334, 0.55351, 1)
@@ -44,6 +42,7 @@ font_size = 68
 font_color = Color(0, 1, 0, 1)
 
 [node name="main_menu" type="Node2D" unique_id=1834276984]
+script = ExtResource("1_8ln24")
 
 [node name="Background2" type="Sprite2D" parent="." unique_id=2028999594]
 position = Vector2(576.125, 324.25)
@@ -75,7 +74,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ekxnf")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_bqqt6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wu84c")
 text = "Start"
-script = ExtResource("4_oa1go")
 
 [node name="Settingss" type="Button" parent="." unique_id=812822683]
 offset_left = 450.0
@@ -89,14 +87,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ekxnf")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_bqqt6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wu84c")
 text = "Settings"
-script = ExtResource("5_tbmy8")
 
-[node name="Label" type="Label" parent="." unique_id=1996368539]
+[node name="Name" type="Label" parent="." unique_id=1996368539]
 offset_left = 297.0
 offset_top = 107.0
 offset_right = 823.0
 offset_bottom = 176.0
-text = "Man Vs Cat"
+text = "Man & Cat"
 label_settings = SubResource("LabelSettings_yw88p")
 
 [node name="Exit" type="Button" parent="." unique_id=910468506]
@@ -111,12 +108,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ekxnf")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_bqqt6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wu84c")
 text = "Exit"
-script = ExtResource("5_8ln24")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=432040120]
-offset_right = 40.0
-offset_bottom = 40.0
-
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Start" to="Start" method="_on_pressed"]
+[connection signal="pressed" from="Settingss" to="." method="_on_settingss_pressed"]
 [connection signal="pressed" from="Settingss" to="Settingss" method="_on_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Exit" to="Exit" method="_on_pressed"]

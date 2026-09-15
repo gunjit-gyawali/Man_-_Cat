@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://brcnchi4labk6"]
+
+[ext_resource type="Texture2D" uid="uid://dxetfma3t2ch7" path="res://Assets/craftpix-781190-pixel-art-forest-platformer-tileset/Tiles/Ground_grass_0000_tile.png" id="1_44ekr"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_18xvw"]
+texture = ExtResource("1_44ekr")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_yw88p"]
+sources/0 = SubResource("TileSetAtlasSource_18xvw")
+
+[node name="Man-1st-World" type="Node2D" unique_id=1924848867]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1086425267]
+tile_set = SubResource("TileSet_yw88p")
+format = 2
+layer_0/tile_data = PackedInt32Array(262144, 65536, 1, 262145, 65536, 1, 262146, 65536, 1, 262147, 65536, 1, 262148, 65536, 1, 262149, 65536, 1, 262150, 65536, 1, 262151, 65536, 1, 262152, 65536, 1, 262153, 65536, 1, 262154, 65536, 1, 262155, 65536, 1, 262156, 65536, 1, 262157, 65536, 1, 262158, 65536, 1, 262159, 65536, 1, 262160, 65536, 1, 262161, 65536, 1, 262162, 65536, 1, 262163, 65536, 1, 327700, 65536, 1, 327701, 65536, 1, 327702, 65536, 1, 327703, 65536, 1, 327680, 131072, 2, 327681, 196608, 2, 327683, 196608, 2, 327685, 196608, 2, 327687, 196608, 2, 327689, 196608, 2, 327682, 131072, 2, 327684, 131072, 2, 327686, 131072, 2, 327688, 131072, 2)

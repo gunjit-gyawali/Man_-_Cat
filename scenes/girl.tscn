@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://ra1ovd8ee0rp"]
+
+[ext_resource type="Texture2D" uid="uid://dwf86g8p2u8jj" path="res://Assets/craftpix-net-793515-free-tiny-schoolgirl-pixel-art-sprite-pack/Schoolgirl_1/Idle.png" id="1_jetl1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eninh"]
+atlas = ExtResource("1_jetl1")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3g50u"]
+atlas = ExtResource("1_jetl1")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3h4fo"]
+atlas = ExtResource("1_jetl1")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3c2jt"]
+atlas = ExtResource("1_jetl1")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4rsq"]
+atlas = ExtResource("1_jetl1")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlhqa"]
+atlas = ExtResource("1_jetl1")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yw88p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eninh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3g50u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3h4fo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3c2jt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4rsq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlhqa")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yw88p"]
+radius = 54.0
+height = 178.0
+
+[node name="Girl" type="CharacterBody2D" unique_id=1211583693]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=966056210]
+position = Vector2(211.49998, 197.39589)
+scale = Vector2(4.3046875, 4.084311)
+sprite_frames = SubResource("SpriteFrames_yw88p")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1409727483]
+position = Vector2(201, 370)
+shape = SubResource("CapsuleShape2D_yw88p")

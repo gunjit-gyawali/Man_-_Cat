@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://cv4liyxksxwlp"]
+
+[ext_resource type="Texture2D" uid="uid://ckcgilh36ik1y" path="res://Assets/craftpix-net-610575-free-street-animal-pixel-art-asset-pack/3 Cat/Idle.png" id="1_lj8jo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2brh"]
+atlas = ExtResource("1_lj8jo")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dn4c7"]
+atlas = ExtResource("1_lj8jo")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vejd"]
+atlas = ExtResource("1_lj8jo")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ws0vm"]
+atlas = ExtResource("1_lj8jo")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yw88p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2brh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dn4c7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vejd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ws0vm")
+}],
+"loop": 1,
+"name": &"Cat_idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a6whi"]
+radius = 88.814415
+
+[node name="Cat" type="CharacterBody2D" unique_id=73532615]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2004780765]
+position = Vector2(138.99998, 158)
+scale = Vector2(6.7916665, 7.5833325)
+sprite_frames = SubResource("SpriteFrames_yw88p")
+animation = &"Cat_idle"
+autoplay = "Cat_idle"
+frame_progress = 0.7623671
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=992242172]
+position = Vector2(165, 260)
+shape = SubResource("CircleShape2D_a6whi")
