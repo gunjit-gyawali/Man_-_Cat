@@ -31,7 +31,8 @@ func _ready() -> void:
 	"Alice (Girl) : Check the crops carefully.",
 	"Ruby (Cat) : I will.",
 	"Alice (Girl) : See you there, Ruby.",
-    "Ruby (Cat) : Meow! See you soon!"
+	"Ruby (Cat) : Meow! See you soon!",
+	"They both go towards the fields!"
 	])
 
 
@@ -60,3 +61,4 @@ func advance_dialouge() -> void:
 		get_tree().paused = false
 		is_dailouge_active = false
 		dialouge_box.visible = false
+		get_tree().change_scene_to_file("res://scenes/character_selection.tscn")
