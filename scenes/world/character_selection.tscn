@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://bg5dg4q4wdduu"]
 
+[ext_resource type="Script" uid="uid://oo8ssre02aiy" path="res://scripts/character_selection.gd" id="1_7pc0o"]
 [ext_resource type="Texture2D" uid="uid://cfe6ikbblbvuc" path="res://Assets/assets1/Background/Bright/Background.png" id="1_72hpt"]
 [ext_resource type="Script" uid="uid://bjgkp8pgie1jg" path="res://scripts/character-selection-background.gd" id="1_l56u2"]
 [ext_resource type="FontFile" uid="uid://do3mcljd43b8e" path="res://Assets/fonts/Pixel Game.otf" id="4_cqj7k"]
 [ext_resource type="PackedScene" uid="uid://cv4liyxksxwlp" path="res://scenes/cat's/cat.tscn" id="5_7xed0"]
-[ext_resource type="PackedScene" uid="uid://ra1ovd8ee0rp" path="res://scenes/man's/girl.tscn" id="6_wh1ae"]
+[ext_resource type="Texture2D" uid="uid://dwf86g8p2u8jj" path="res://Assets/characters/Schoolgirl_1/Idle.png" id="6_72hpt"]
 [ext_resource type="FontFile" uid="uid://b05u5gj7r1w1b" path="res://Assets/Main Menu/batmfa__.ttf" id="7_iixut"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cfg4s"]
@@ -47,8 +48,59 @@ shadow_color = Color(0.09239707, 0.09239706, 0.09239706, 0.6)
 shadow_size = 9
 shadow_offset = Vector2(1, 1)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_eninh"]
+atlas = ExtResource("6_72hpt")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3g50u"]
+atlas = ExtResource("6_72hpt")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3h4fo"]
+atlas = ExtResource("6_72hpt")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3c2jt"]
+atlas = ExtResource("6_72hpt")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4rsq"]
+atlas = ExtResource("6_72hpt")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlhqa"]
+atlas = ExtResource("6_72hpt")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7pc0o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eninh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3g50u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3h4fo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3c2jt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4rsq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlhqa")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Character-Selection" type="Node2D" unique_id=1346005313]
 position = Vector2(-1, 0)
+script = ExtResource("1_7pc0o")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1970858092]
 
@@ -97,12 +149,9 @@ text = "Select Your Character"
 label_settings = SubResource("LabelSettings_o5bvq")
 
 [node name="Cat" parent="." unique_id=73532615 instance=ExtResource("5_7xed0")]
-position = Vector2(767, 127)
+position = Vector2(767, 120)
 
-[node name="Girl" parent="." unique_id=1211583693 instance=ExtResource("6_wh1ae")]
-position = Vector2(85, 17)
-
-[node name="Start" type="Button" parent="." unique_id=570551343]
+[node name="Alice" type="Button" parent="." unique_id=570551343]
 offset_left = 189.0
 offset_top = 489.0
 offset_right = 389.0
@@ -115,7 +164,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_7rsvw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_y8tcv")
 text = "Alice"
 
-[node name="Start2" type="Button" parent="." unique_id=1547432721]
+[node name="Ruby" type="Button" parent="." unique_id=1547432721]
 offset_left = 789.0
 offset_top = 487.0
 offset_right = 989.0
@@ -128,5 +177,13 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_7rsvw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_y8tcv")
 text = "Ruby"
 
-[connection signal="pressed" from="Start" to="Start" method="_on_pressed"]
-[connection signal="pressed" from="Start2" to="Start2" method="_on_pressed"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=635376529]
+position = Vector2(293, 204)
+scale = Vector2(4.3046875, 4.084311)
+sprite_frames = SubResource("SpriteFrames_7pc0o")
+autoplay = "default"
+
+[connection signal="pressed" from="Alice" to="." method="_on_alice_pressed"]
+[connection signal="pressed" from="Alice" to="Alice" method="_on_pressed"]
+[connection signal="pressed" from="Ruby" to="." method="_on_ruby_pressed"]
+[connection signal="pressed" from="Ruby" to="Ruby" method="_on_pressed"]
