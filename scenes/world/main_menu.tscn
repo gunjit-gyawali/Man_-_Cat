@@ -89,9 +89,9 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_wu84c")
 text = "Settings"
 
 [node name="Name" type="Label" parent="." unique_id=1996368539]
-offset_left = 297.0
+offset_left = 308.0
 offset_top = 107.0
-offset_right = 823.0
+offset_right = 834.0
 offset_bottom = 176.0
 text = "Man & Cat"
 label_settings = SubResource("LabelSettings_yw88p")
