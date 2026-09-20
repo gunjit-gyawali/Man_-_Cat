@@ -6,3 +6,6 @@ func _on_alice_pressed() -> void:
 
 func _on_ruby_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/cat's/cat_world_1.tscn")
+
+func _on_completed_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/comming_soon.tscn")

@@ -1,0 +1,207 @@
+[gd_scene format=3 uid="uid://bwuwup4ldlnj5"]
+
+[ext_resource type="Script" uid="uid://oo8ssre02aiy" path="res://scripts/character_selection.gd" id="1_5iq62"]
+[ext_resource type="Texture2D" uid="uid://cfe6ikbblbvuc" path="res://Assets/assets1/Background/Bright/Background.png" id="2_clfpm"]
+[ext_resource type="Script" uid="uid://bjgkp8pgie1jg" path="res://scripts/character-selection-background.gd" id="3_61mjw"]
+[ext_resource type="FontFile" uid="uid://do3mcljd43b8e" path="res://Assets/fonts/Pixel Game.otf" id="4_k40mg"]
+[ext_resource type="PackedScene" uid="uid://cv4liyxksxwlp" path="res://scenes/cat's/cat.tscn" id="5_wpdw3"]
+[ext_resource type="FontFile" uid="uid://b05u5gj7r1w1b" path="res://Assets/Main Menu/batmfa__.ttf" id="6_6cbnb"]
+[ext_resource type="Texture2D" uid="uid://dwf86g8p2u8jj" path="res://Assets/characters/Schoolgirl_1/Idle.png" id="7_e5akd"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cfg4s"]
+distance = -480.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i08kd"]
+size = Vector2(117.6875, 255.5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_o5bvq"]
+font = ExtResource("4_k40mg")
+font_size = 68
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v724p"]
+bg_color = Color(0.43601397, 0.7051334, 0.55351, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.09239707, 0.09239706, 0.09239706, 0.6)
+shadow_size = 9
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7rsvw"]
+bg_color = Color(0.0245942, 0.41653258, 0.024844708, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.09239707, 0.09239706, 0.09239706, 0.6)
+shadow_size = 9
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y8tcv"]
+bg_color = Color(0.2470831, 0.5448225, 0.24583673, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.09239707, 0.09239706, 0.09239706, 0.6)
+shadow_size = 9
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eninh"]
+atlas = ExtResource("7_e5akd")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3g50u"]
+atlas = ExtResource("7_e5akd")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3h4fo"]
+atlas = ExtResource("7_e5akd")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3c2jt"]
+atlas = ExtResource("7_e5akd")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4rsq"]
+atlas = ExtResource("7_e5akd")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlhqa"]
+atlas = ExtResource("7_e5akd")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7pc0o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eninh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3g50u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3h4fo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3c2jt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4rsq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlhqa")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Character-Selection" type="Node2D" unique_id=1346005313]
+position = Vector2(-1, 0)
+script = ExtResource("1_5iq62")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1760545316]
+position = Vector2(571, 319)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1970858092]
+
+[node name="Background" type="Sprite2D" parent="StaticBody2D" unique_id=440023007]
+position = Vector2(258, 333)
+scale = Vector2(1.9833333, 1.4074074)
+texture = ExtResource("2_clfpm")
+script = ExtResource("3_61mjw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=372065851]
+shape = SubResource("WorldBoundaryShape2D_cfg4s")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=857671580]
+position = Vector2(1015.6875, 364)
+shape = SubResource("RectangleShape2D_i08kd")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=717742235]
+position = Vector2(775.15625, 361)
+shape = SubResource("RectangleShape2D_i08kd")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=114531355]
+position = Vector2(380, 361)
+shape = SubResource("RectangleShape2D_i08kd")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1191662634]
+position = Vector2(192, 362)
+shape = SubResource("RectangleShape2D_i08kd")
+
+[node name="Panel2" type="Panel" parent="." unique_id=59348020]
+offset_left = -31.0
+offset_top = -25.0
+offset_right = 1250.0
+offset_bottom = 707.0
+
+[node name="Name" type="Label" parent="." unique_id=152800440]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 292.0
+offset_top = 56.0
+offset_right = 876.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Select Your second Character"
+label_settings = SubResource("LabelSettings_o5bvq")
+
+[node name="Cat" parent="." unique_id=73532615 instance=ExtResource("5_wpdw3")]
+position = Vector2(812, 249.99998)
+
+[node name="Alice" type="Button" parent="." unique_id=570551343]
+offset_left = 189.0
+offset_top = 489.0
+offset_right = 389.0
+offset_bottom = 550.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_6cbnb")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_v724p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7rsvw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y8tcv")
+text = "Alice"
+
+[node name="Ruby" type="Button" parent="." unique_id=1547432721]
+offset_left = 789.0
+offset_top = 487.0
+offset_right = 989.0
+offset_bottom = 548.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_6cbnb")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_v724p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7rsvw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y8tcv")
+text = "Ruby"
+
+[node name="completed" type="Button" parent="." unique_id=304011520]
+offset_left = 415.0
+offset_top = 579.0
+offset_right = 762.0
+offset_bottom = 640.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_6cbnb")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_v724p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7rsvw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y8tcv")
+text = " Completed Both "
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=635376529]
+position = Vector2(301, 216)
+scale = Vector2(4.3046875, 4.084311)
+sprite_frames = SubResource("SpriteFrames_7pc0o")
+autoplay = "default"
+
+[connection signal="pressed" from="Alice" to="." method="_on_alice_pressed"]
+[connection signal="pressed" from="Alice" to="Alice" method="_on_pressed"]
+[connection signal="pressed" from="Ruby" to="." method="_on_ruby_pressed"]
+[connection signal="pressed" from="Ruby" to="Ruby" method="_on_pressed"]
+[connection signal="pressed" from="completed" to="." method="_on_completed_pressed"]
+[connection signal="pressed" from="completed" to="completed" method="_on_pressed"]

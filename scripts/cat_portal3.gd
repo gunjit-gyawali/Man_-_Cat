@@ -5,4 +5,4 @@ func _on_body_entered(body: Node2D) -> void:
 		call_deferred("next_level")
 
 func next_level() -> void:
-	get_tree().change_scene_to_file("res://scenes/comming_soon.tscn")
+	get_tree().change_scene_to_file("res://scenes/world/character_selection2.tscn")
