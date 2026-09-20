@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://28psp8npx3k2"]
+
+[ext_resource type="Script" uid="uid://ck6501fcmg6o3" path="res://scripts/coin.gd" id="1_1qarw"]
+[ext_resource type="Texture2D" uid="uid://m350uatj6f51" path="res://Assets/Cartoon Jungle Game Tileset_Collectable Object - Cherry.png" id="2_pdsja"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qy8vj"]
+radius = 19.026299
+
+[node name="coin" type="Node2D" unique_id=1673851975]
+script = ExtResource("1_1qarw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1263715713]
+position = Vector2(-6, -4)
+scale = Vector2(0.359375, 0.359375)
+texture = ExtResource("2_pdsja")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1898671481]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1377721730]
+position = Vector2(-2, -1)
+shape = SubResource("CircleShape2D_qy8vj")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
