@@ -101,7 +101,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"cat_walk",
-"speed": 7.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -124,17 +124,16 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_a6whi"]
 radius = 88.814415
 
-[node name="Cat" type="CharacterBody2D" unique_id=73532615]
+[node name="Cat" type="CharacterBody2D" unique_id=73532615 groups=["player"]]
+scale = Vector2(0.7, 0.7)
 script = ExtResource("1_t8pth")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2004780765]
 position = Vector2(138.99998, 158)
 scale = Vector2(6.7916665, 7.5833325)
 sprite_frames = SubResource("SpriteFrames_yw88p")
-animation = &"jump"
+animation = &"cat_walk"
 autoplay = "Cat_idle"
-frame = 3
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=992242172]
 position = Vector2(121, 253)

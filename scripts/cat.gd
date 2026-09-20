@@ -2,7 +2,10 @@ extends CharacterBody2D
 
 
 const SPEED = 500.0
-const JUMP_VELOCITY = -500.0
+const JUMP_VELOCITY = -600.0
+
+@export var start_position = Vector2(3000,100)
+
 
 @onready var animated_sprite = $AnimatedSprite2D
 func _physics_process(delta: float) -> void:
@@ -28,6 +31,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		animated_sprite.play('Cat_idle')
 
+
+	if position.y > 5000:
+		position = start_position
 		
 	if direction:
 		velocity.x = direction * SPEED

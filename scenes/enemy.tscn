@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://blxl4bfqyji0q"]
+
+[ext_resource type="Script" uid="uid://cbwkvco70iwnr" path="res://scripts/man-worlds-enemy.gd" id="1_dkp3k"]
+[ext_resource type="Texture2D" uid="uid://3bryjs0annk3" path="res://Assets/17.png" id="2_csf0u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5d0hv"]
+atlas = ExtResource("2_csf0u")
+region = Rect2(0, 0, 12, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvw7x"]
+atlas = ExtResource("2_csf0u")
+region = Rect2(12, 0, 12, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n27jj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5d0hv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvw7x")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ek76"]
+size = Vector2(498, 40.5)
+
+[node name="Enemy" type="Area2D" unique_id=962711704]
+script = ExtResource("1_dkp3k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=420759165]
+position = Vector2(723, 203)
+scale = Vector2(3.4583147, 2.8219843)
+sprite_frames = SubResource("SpriteFrames_n27jj")
+autoplay = "default"
+frame = 1
+frame_progress = 0.61733484
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="." unique_id=740769820]
+position = Vector2(799, 203)
+scale = Vector2(3.4583147, 2.8219843)
+sprite_frames = SubResource("SpriteFrames_n27jj")
+autoplay = "default"
+frame_progress = 0.11389049
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="." unique_id=786480246]
+position = Vector2(837, 202)
+scale = Vector2(3.4583147, 2.8219843)
+sprite_frames = SubResource("SpriteFrames_n27jj")
+autoplay = "default"
+frame_progress = 0.11389049
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="." unique_id=1143392479]
+position = Vector2(878, 202.00002)
+scale = Vector2(3.4583147, 2.8219843)
+sprite_frames = SubResource("SpriteFrames_n27jj")
+autoplay = "default"
+frame_progress = 0.11389049
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="." unique_id=1610552665]
+position = Vector2(918, 201)
+scale = Vector2(3.4583147, 2.8219843)
+sprite_frames = SubResource("SpriteFrames_n27jj")
+autoplay = "default"
+frame_progress = 0.11389049
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="." unique_id=818515174]
+position = Vector2(953, 202)
+scale = Vector2(3.4583147, 2.8219843)
+sprite_frames = SubResource("SpriteFrames_n27jj")
+autoplay = "default"
+frame_progress = 0.11389049
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="." unique_id=1740856164]
+position = Vector2(990, 202)
+scale = Vector2(3.4583147, 2.8219843)
+sprite_frames = SubResource("SpriteFrames_n27jj")
+frame_progress = 0.11389049
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="." unique_id=897965939]
+position = Vector2(1023, 201)
+scale = Vector2(3.4583147, 2.8219843)
+sprite_frames = SubResource("SpriteFrames_n27jj")
+autoplay = "default"
+frame_progress = 0.11389049
+
+[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="." unique_id=457140555]
+position = Vector2(1062, 202)
+scale = Vector2(3.4583147, 2.8219843)
+sprite_frames = SubResource("SpriteFrames_n27jj")
+autoplay = "default"
+frame_progress = 0.11389049
+
+[node name="AnimatedSprite2D11" type="AnimatedSprite2D" parent="." unique_id=1344254544]
+position = Vector2(1102.0001, 201.99998)
+scale = Vector2(3.4583147, 2.8219843)
+sprite_frames = SubResource("SpriteFrames_n27jj")
+autoplay = "default"
+frame_progress = 0.11389049
+
+[node name="AnimatedSprite2D12" type="AnimatedSprite2D" parent="." unique_id=251828008]
+position = Vector2(1138.0001, 202)
+scale = Vector2(3.4583147, 2.8219843)
+sprite_frames = SubResource("SpriteFrames_n27jj")
+autoplay = "default"
+frame_progress = 0.11389049
+
+[node name="AnimatedSprite2D13" type="AnimatedSprite2D" parent="." unique_id=469142975]
+position = Vector2(681, 203.99998)
+scale = Vector2(3.4583147, 2.8219843)
+sprite_frames = SubResource("SpriteFrames_n27jj")
+autoplay = "default"
+frame_progress = 0.11389049
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=313267058 groups=["player"]]
+position = Vector2(763.00006, 203)
+scale = Vector2(3.4583147, 2.8219843)
+sprite_frames = SubResource("SpriteFrames_n27jj")
+autoplay = "default"
+frame_progress = 0.93288136
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1312937219]
+position = Vector2(915, 203.25)
+shape = SubResource("RectangleShape2D_4ek76")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

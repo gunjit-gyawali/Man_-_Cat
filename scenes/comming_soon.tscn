@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://4sh3e06o3tnl"]
+
+[ext_resource type="Texture2D" uid="uid://cfe6ikbblbvuc" path="res://Assets/assets1/Background/Bright/Background.png" id="1_pq2js"]
+[ext_resource type="Script" uid="uid://qss24mslwnis" path="res://scripts/background.gd" id="2_p02lh"]
+[ext_resource type="FontFile" uid="uid://b05u5gj7r1w1b" path="res://Assets/Main Menu/batmfa__.ttf" id="3_pw72c"]
+[ext_resource type="FontFile" uid="uid://dsmjydxifjkwv" path="res://Assets/Main Menu/batmfo__.ttf" id="4_xr8ec"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rgxs"]
+bg_color = Color(0.43601397, 0.7051334, 0.55351, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.09239707, 0.09239706, 0.09239706, 0.6)
+shadow_size = 9
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8wn2"]
+bg_color = Color(0.0245942, 0.41653258, 0.024844708, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.09239707, 0.09239706, 0.09239706, 0.6)
+shadow_size = 9
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lo7h1"]
+bg_color = Color(0.2470831, 0.5448225, 0.24583673, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.09239707, 0.09239706, 0.09239706, 0.6)
+shadow_size = 9
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wf3a2"]
+font = ExtResource("4_xr8ec")
+font_size = 68
+font_color = Color(0, 1, 0, 1)
+
+[node name="Comming_Soon" type="Node2D" unique_id=736369460]
+
+[node name="Background2" type="Sprite2D" parent="." unique_id=1174561394]
+position = Vector2(576.125, 324.25)
+scale = Vector2(1.1997397, 1.199074)
+texture = ExtResource("1_pq2js")
+script = ExtResource("2_p02lh")
+
+[node name="Background3" type="Sprite2D" parent="." unique_id=1659491982]
+position = Vector2(-573.5, 324.00003)
+scale = Vector2(1.2, 1.199)
+texture = ExtResource("1_pq2js")
+script = ExtResource("2_p02lh")
+
+[node name="Panel" type="Panel" parent="." unique_id=1048559135]
+offset_left = -14.0
+offset_top = -4.0
+offset_right = 1160.0
+offset_bottom = 654.0
+
+[node name="Start" type="Button" parent="." unique_id=5568561]
+offset_left = 443.0
+offset_top = 335.0
+offset_right = 661.0
+offset_bottom = 396.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_pw72c")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_8rgxs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r8wn2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lo7h1")
+text = "Main Menu"
+
+[node name="Name" type="Label" parent="." unique_id=275378378]
+offset_left = 224.0
+offset_top = 155.0
+offset_right = 883.0
+offset_bottom = 224.0
+text = "Comming Soon"
+label_settings = SubResource("LabelSettings_wf3a2")
+
+[node name="Exit" type="Button" parent="." unique_id=700994597]
+offset_left = 450.0
+offset_top = 418.0
+offset_right = 649.0
+offset_bottom = 479.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_pw72c")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_8rgxs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r8wn2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lo7h1")
+text = "Exit"
+
+[connection signal="pressed" from="Start" to="Start" method="_on_pressed"]
+[connection signal="pressed" from="Exit" to="Exit" method="_on_pressed"]

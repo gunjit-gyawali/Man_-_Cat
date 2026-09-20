@@ -152,7 +152,7 @@ text = "Select Your Character"
 label_settings = SubResource("LabelSettings_o5bvq")
 
 [node name="Cat" parent="." unique_id=73532615 instance=ExtResource("5_7xed0")]
-position = Vector2(767, 120)
+position = Vector2(814, 229)
 
 [node name="Alice" type="Button" parent="." unique_id=570551343]
 offset_left = 189.0
