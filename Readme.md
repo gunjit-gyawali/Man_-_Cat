@@ -32,6 +32,11 @@ import game to godot
 
 ## Screenshots
 
+<img width="1154" height="649" alt="Screenshot From 2026-09-21 04-40-17" src="https://github.com/user-attachments/assets/593a0980-d187-4999-94d8-01a64643f08f" />
+<img width="1154" height="649" alt="Screenshot From 2026-09-21 04-39-20" src="https://github.com/user-attachments/assets/2daa048a-dcf1-4053-aa68-09458565b6bf" />
+<img width="1154" height="649" alt="Screenshot From 2026-09-21 04-39-14" src="https://github.com/user-attachments/assets/99e8511b-99f4-4d33-89a0-8ed0d32d8b6b" />
+<img width="1154" height="649" alt="Screenshot From 2026-09-21 04-38-37" src="https://github.com/user-attachments/assets/5182ed95-f112-4abe-be27-83646aa82102" />
+
 
 ## Future Improvements
 Add more levels
