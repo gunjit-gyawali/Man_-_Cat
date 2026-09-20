@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ck6501fcmg6o3" path="res://scripts/coin.gd" id="1_1qarw"]
 [ext_resource type="Texture2D" uid="uid://m350uatj6f51" path="res://Assets/Cartoon Jungle Game Tileset_Collectable Object - Cherry.png" id="2_pdsja"]
+[ext_resource type="AudioStream" uid="uid://c53d1w8b252ms" path="res://Assets/assets1/coin.mp3" id="3_5ywsv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qy8vj"]
 radius = 19.026299
@@ -19,5 +20,8 @@ texture = ExtResource("2_pdsja")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1377721730]
 position = Vector2(-2, -1)
 shape = SubResource("CircleShape2D_qy8vj")
+
+[node name="collect" type="AudioStreamPlayer" parent="." unique_id=238392905]
+stream = ExtResource("3_5ywsv")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

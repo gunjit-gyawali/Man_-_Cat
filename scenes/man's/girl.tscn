@@ -122,8 +122,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yw88p"]
-radius = 26.0
-height = 78.0
+radius = 23.0
+height = 74.0
 
 [node name="Girl" type="CharacterBody2D" unique_id=1211583693 groups=["player"]]
 script = ExtResource("1_nuqkn")
@@ -137,7 +137,7 @@ autoplay = "idle"
 frame_progress = 0.6039223
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1409727483]
-position = Vector2(217, 385)
+position = Vector2(223, 374)
 shape = SubResource("CapsuleShape2D_yw88p")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1478290784]

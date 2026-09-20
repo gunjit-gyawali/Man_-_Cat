@@ -2,7 +2,7 @@
 
 [ext_resource type="AudioStream" uid="uid://bkikqhucy7bd4" path="res://Assets/random_img/time_for_adventure.mp3" id="1_yi5l4"]
 
-[node name="bg" type="AudioStreamPlayer2D" unique_id=543944516]
+[node name="bg" type="AudioStreamPlayer" unique_id=342926866]
 stream = ExtResource("1_yi5l4")
-volume_db = 5.943
+volume_db = -7.013
 autoplay = true

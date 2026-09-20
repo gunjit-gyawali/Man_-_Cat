@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 
 Transtion="*uid://ch542eewdvjtc"
 Bg="*uid://crbth5pa8skrr"
+GameController="*uid://dwyt268q7fgl7"
+EventController="*uid://ds61ihp3hn2lp"
 
 [display]
 

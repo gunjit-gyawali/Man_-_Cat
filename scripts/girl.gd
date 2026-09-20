@@ -13,8 +13,8 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-
-
+		get_parent().get_node("jump").play()
+		
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction > 0:
 		$AnimatedSprite2D.play("walk")
