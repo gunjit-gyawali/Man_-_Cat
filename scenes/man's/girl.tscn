@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ra1ovd8ee0rp"]
 
-[ext_resource type="Texture2D" uid="uid://dwf86g8p2u8jj" path="res://Assets/craftpix-net-793515-free-tiny-schoolgirl-pixel-art-sprite-pack/Schoolgirl_1/Idle.png" id="1_jetl1"]
+[ext_resource type="Texture2D" uid="uid://dwf86g8p2u8jj" path="res://Assets/characters/Schoolgirl_1/Idle.png" id="1_jetl1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eninh"]
 atlas = ExtResource("1_jetl1")
@@ -67,3 +67,6 @@ autoplay = "default"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1409727483]
 position = Vector2(201, 370)
 shape = SubResource("CapsuleShape2D_yw88p")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1648046380]
+position = Vector2(202, 252)

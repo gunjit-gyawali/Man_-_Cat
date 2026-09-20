@@ -50,6 +50,9 @@ shadow_offset = Vector2(1, 1)
 [node name="Character-Selection" type="Node2D" unique_id=1346005313]
 position = Vector2(-1, 0)
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1760545316]
+position = Vector2(571, 319)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1970858092]
 
 [node name="Background" type="Sprite2D" parent="StaticBody2D" unique_id=440023007]
