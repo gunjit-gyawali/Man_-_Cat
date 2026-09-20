@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://b7hwyxcv81dbm" path="res://Assets/assets1/Objects_Animated/Plant/trap_plant5.png" id="19_ex7ba"]
 [ext_resource type="Texture2D" uid="uid://dy1db4ti6jjbp" path="res://Assets/assets1/Objects_Animated/Plant/trap_plant6.png" id="20_arxjm"]
 [ext_resource type="Texture2D" uid="uid://ban2nd0an8nmj" path="res://Assets/assets1/Objects_Animated/Plant/trap_plant.png" id="21_kwi0m"]
+[ext_resource type="PackedScene" uid="uid://dssi85x8kiybd" path="res://scenes/cat's/pick_up_cat.tscn" id="22_waxbk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5g35e"]
 texture = ExtResource("1_1i70m")
@@ -481,7 +482,7 @@ position = Vector2(-166.875, -335)
 shape = SubResource("RectangleShape2D_lu7u7")
 
 [node name="Cat" parent="." unique_id=73532615 instance=ExtResource("4_bf60p")]
-position = Vector2(8353.999, -2122)
+position = Vector2(434.0005, -443.00037)
 start_position = Vector2(3750, -420)
 
 [node name="portal" type="Area2D" parent="." unique_id=296417747]
@@ -498,5 +499,49 @@ frame_progress = 0.72068644
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal" unique_id=2006631419]
 position = Vector2(-15, 83)
 shape = SubResource("RectangleShape2D_cfg4s")
+
+[node name="Node" type="Node" parent="." unique_id=1407939676]
+
+[node name="pick_up" parent="Node" unique_id=445057389 instance=ExtResource("22_waxbk")]
+position = Vector2(955, -89)
+
+[node name="pick_up2" parent="Node" unique_id=497432458 instance=ExtResource("22_waxbk")]
+position = Vector2(1332, -82)
+
+[node name="pick_up3" parent="Node" unique_id=673818208 instance=ExtResource("22_waxbk")]
+position = Vector2(1871, -78)
+
+[node name="pick_up4" parent="Node" unique_id=1618232872 instance=ExtResource("22_waxbk")]
+position = Vector2(2680, -78)
+
+[node name="pick_up5" parent="Node" unique_id=443654667 instance=ExtResource("22_waxbk")]
+position = Vector2(4362, -193)
+
+[node name="pick_up6" parent="Node" unique_id=1142954633 instance=ExtResource("22_waxbk")]
+position = Vector2(3454, -75)
+
+[node name="pick_up7" parent="Node" unique_id=920226672 instance=ExtResource("22_waxbk")]
+position = Vector2(5797, -478)
+
+[node name="pick_up8" parent="Node" unique_id=906275461 instance=ExtResource("22_waxbk")]
+position = Vector2(7526, -812)
+
+[node name="pick_up9" parent="Node" unique_id=1567763319 instance=ExtResource("22_waxbk")]
+position = Vector2(6556, -1054)
+
+[node name="pick_up10" parent="Node" unique_id=2135016020 instance=ExtResource("22_waxbk")]
+position = Vector2(5586, -1026)
+
+[node name="pick_up11" parent="Node" unique_id=805909227 instance=ExtResource("22_waxbk")]
+position = Vector2(4713, -1347)
+
+[node name="pick_up12" parent="Node" unique_id=537627028 instance=ExtResource("22_waxbk")]
+position = Vector2(5345, -1817)
+
+[node name="pick_up13" parent="Node" unique_id=195067289 instance=ExtResource("22_waxbk")]
+position = Vector2(6747, -1879)
+
+[node name="pick_up14" parent="Node" unique_id=248414537 instance=ExtResource("22_waxbk")]
+position = Vector2(8460, -1871)
 
 [connection signal="body_entered" from="portal" to="portal" method="_on_body_entered"]

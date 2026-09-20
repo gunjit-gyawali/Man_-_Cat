@@ -18,8 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Transtion="*uid://ch542eewdvjtc"
-EventController="*uid://ds61ihp3hn2lp"
-GameController="*uid://dwyt268q7fgl7"
+Bg="*uid://crbth5pa8skrr"
 
 [display]
 

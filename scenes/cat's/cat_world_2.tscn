@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://b7hwyxcv81dbm" path="res://Assets/assets1/Objects_Animated/Plant/trap_plant5.png" id="20_i5ikr"]
 [ext_resource type="Texture2D" uid="uid://dy1db4ti6jjbp" path="res://Assets/assets1/Objects_Animated/Plant/trap_plant6.png" id="21_7otsx"]
 [ext_resource type="Texture2D" uid="uid://ban2nd0an8nmj" path="res://Assets/assets1/Objects_Animated/Plant/trap_plant.png" id="22_qx65y"]
+[ext_resource type="PackedScene" uid="uid://dssi85x8kiybd" path="res://scenes/cat's/pick_up_cat.tscn" id="24_cdr00"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vh3n3"]
 texture = ExtResource("1_8bwjf")
@@ -470,5 +471,28 @@ autoplay = "default"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal" unique_id=1813657143]
 position = Vector2(125, 223.75)
 shape = SubResource("RectangleShape2D_cfg4s")
+
+[node name="Node" type="Node" parent="." unique_id=1543440435]
+
+[node name="pick_up" parent="Node" unique_id=445057389 instance=ExtResource("24_cdr00")]
+position = Vector2(1820, -94)
+
+[node name="pick_up2" parent="Node" unique_id=387713671 instance=ExtResource("24_cdr00")]
+position = Vector2(2198, -2)
+
+[node name="pick_up3" parent="Node" unique_id=1202867063 instance=ExtResource("24_cdr00")]
+position = Vector2(2656, -39)
+
+[node name="pick_up4" parent="Node" unique_id=1264756244 instance=ExtResource("24_cdr00")]
+position = Vector2(3250, -22)
+
+[node name="pick_up5" parent="Node" unique_id=1631984795 instance=ExtResource("24_cdr00")]
+position = Vector2(3709, -16)
+
+[node name="pick_up6" parent="Node" unique_id=751120133 instance=ExtResource("24_cdr00")]
+position = Vector2(4256, -33)
+
+[node name="pick_up7" parent="Node" unique_id=1405382981 instance=ExtResource("24_cdr00")]
+position = Vector2(5006, 29)
 
 [connection signal="body_entered" from="portal" to="portal" method="_on_body_entered"]
