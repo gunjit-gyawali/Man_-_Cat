@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://4sh3e06o3tnl"]
 
+[ext_resource type="Script" uid="uid://baujt653mkhag" path="res://scripts/commingsoon.gd" id="1_p02lh"]
 [ext_resource type="Texture2D" uid="uid://cfe6ikbblbvuc" path="res://Assets/assets1/Background/Bright/Background.png" id="1_pq2js"]
 [ext_resource type="Script" uid="uid://qss24mslwnis" path="res://scripts/background.gd" id="2_p02lh"]
 [ext_resource type="FontFile" uid="uid://b05u5gj7r1w1b" path="res://Assets/Main Menu/batmfa__.ttf" id="3_pw72c"]
@@ -41,6 +42,7 @@ font_size = 68
 font_color = Color(0, 1, 0, 1)
 
 [node name="Comming_Soon" type="Node2D" unique_id=736369460]
+script = ExtResource("1_p02lh")
 
 [node name="Background2" type="Sprite2D" parent="." unique_id=1174561394]
 position = Vector2(576.125, 324.25)
@@ -94,5 +96,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_r8wn2")
 theme_override_styles/hover = SubResource("StyleBoxFlat_lo7h1")
 text = "Exit"
 
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Start" to="Start" method="_on_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Exit" to="Exit" method="_on_pressed"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dssi85x8kiybd"]
 
 [ext_resource type="Script" uid="uid://c3qwf3xy3k3bp" path="res://scripts/pick_up.gd" id="1_6wcrf"]
-[ext_resource type="Texture2D" uid="uid://dq8d5oml3wy0y" path="res://Assets/assets1/Objects/32/object_0000_ivy1.png" id="2_tdl2a"]
+[ext_resource type="Texture2D" uid="uid://chqfqtlcwvw1l" path="res://Assets/Cartoon Jungle Game Tileset_Collectable Object - Apple.png" id="2_tdl2a"]
 [ext_resource type="AudioStream" uid="uid://ciyfa0aip802n" path="res://Assets/random_img/coin.wav" id="12_lryh2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cfg4s"]
@@ -111,11 +111,11 @@ script = ExtResource("1_6wcrf")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2065342186]
 position = Vector2(52, 7)
-scale = Vector2(1.7500001, 1.875)
+scale = Vector2(0.39843753, 0.43359375)
 texture = ExtResource("2_tdl2a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=171897248]
-position = Vector2(53, 9)
+position = Vector2(52, 9)
 shape = SubResource("CapsuleShape2D_cfg4s")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1808738537]

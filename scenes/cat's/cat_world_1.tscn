@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://dy1db4ti6jjbp" path="res://Assets/assets1/Objects_Animated/Plant/trap_plant6.png" id="20_arxjm"]
 [ext_resource type="Texture2D" uid="uid://ban2nd0an8nmj" path="res://Assets/assets1/Objects_Animated/Plant/trap_plant.png" id="21_kwi0m"]
 [ext_resource type="PackedScene" uid="uid://dssi85x8kiybd" path="res://scenes/cat's/pick_up_cat.tscn" id="22_waxbk"]
+[ext_resource type="FontFile" uid="uid://do3mcljd43b8e" path="res://Assets/fonts/Pixel Game.otf" id="23_5me3s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5g35e"]
 texture = ExtResource("1_1i70m")
@@ -395,6 +396,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cfg4s"]
 size = Vector2(72, 41)
 
+[sub_resource type="Theme" id="Theme_cfg4s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i08kd"]
+font_size = 40
+font_color = Color(0.40233842, 0.19927701, 0.098367326, 1)
+
 [node name="cat_world_1" type="Node2D" unique_id=1942166647]
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1245057294]
@@ -482,7 +489,7 @@ position = Vector2(-166.875, -335)
 shape = SubResource("RectangleShape2D_lu7u7")
 
 [node name="Cat" parent="." unique_id=73532615 instance=ExtResource("4_bf60p")]
-position = Vector2(434.0005, -443.00037)
+position = Vector2(280, -288)
 start_position = Vector2(3750, -420)
 
 [node name="portal" type="Area2D" parent="." unique_id=296417747]
@@ -543,5 +550,40 @@ position = Vector2(6747, -1879)
 
 [node name="pick_up14" parent="Node" unique_id=248414537 instance=ExtResource("22_waxbk")]
 position = Vector2(8460, -1871)
+
+[node name="Node2" type="Node" parent="." unique_id=2136881319]
+
+[node name="Label" type="Label" parent="Node2" unique_id=1451582815]
+offset_left = 296.0
+offset_top = -364.0
+offset_right = 486.0
+offset_bottom = -235.0
+theme = SubResource("Theme_cfg4s")
+theme_override_fonts/font = ExtResource("23_5me3s")
+text = "A = Left
+D = Right
+Space = Jump"
+label_settings = SubResource("LabelSettings_i08kd")
+
+[node name="Label3" type="Label" parent="Node2" unique_id=1671429871]
+offset_left = 1009.0
+offset_top = -302.0
+offset_right = 1338.0
+offset_bottom = -173.0
+theme = SubResource("Theme_cfg4s")
+theme_override_fonts/font = ExtResource("23_5me3s")
+text = "Apples are important 
+to collect."
+label_settings = SubResource("LabelSettings_i08kd")
+
+[node name="Label2" type="Label" parent="Node2" unique_id=138577005]
+offset_left = 8726.0
+offset_top = -1959.0
+offset_right = 8999.0
+offset_bottom = -1830.0
+theme = SubResource("Theme_cfg4s")
+theme_override_fonts/font = ExtResource("23_5me3s")
+text = "Jump Here its safe"
+label_settings = SubResource("LabelSettings_i08kd")
 
 [connection signal="body_entered" from="portal" to="portal" method="_on_body_entered"]

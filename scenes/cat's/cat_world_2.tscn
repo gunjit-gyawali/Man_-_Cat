@@ -24,8 +24,9 @@
 [ext_resource type="Texture2D" uid="uid://dy1db4ti6jjbp" path="res://Assets/assets1/Objects_Animated/Plant/trap_plant6.png" id="21_7otsx"]
 [ext_resource type="Texture2D" uid="uid://ban2nd0an8nmj" path="res://Assets/assets1/Objects_Animated/Plant/trap_plant.png" id="22_qx65y"]
 [ext_resource type="PackedScene" uid="uid://dssi85x8kiybd" path="res://scenes/cat's/pick_up_cat.tscn" id="24_cdr00"]
+[ext_resource type="FontFile" uid="uid://do3mcljd43b8e" path="res://Assets/fonts/Pixel Game.otf" id="25_i5ikr"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vh3n3"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7otsx"]
 texture = ExtResource("1_8bwjf")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -0.17985725, 8, 0.35971832, 8, 8, -0.35971832, 8)
@@ -103,7 +104,7 @@ texture = ExtResource("1_8bwjf")
 0:5/0 = 0
 0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 0.35971832, 8, -0.17985725, 8, 8, -0.35971832, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7t6j2"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qx65y"]
 texture = ExtResource("2_lclo4")
 0:0/0 = 0
 1:0/0 = 0
@@ -215,7 +216,7 @@ texture = ExtResource("2_lclo4")
 8:15/size_in_atlas = Vector2i(2, 2)
 8:15/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m703f"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vh3n3"]
 texture = ExtResource("3_8ekqm")
 1:1/0 = 0
 4:1/0 = 0
@@ -276,19 +277,19 @@ texture = ExtResource("3_8ekqm")
 19:19/0 = 0
 22:19/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pdm4h"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7t6j2"]
 texture = ExtResource("4_c3s4g")
 0:0/size_in_atlas = Vector2i(4, 4)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-25.965797, -22.578957, 31.046066, -23.707905, 31.610535, 32.739487, -26.53027, 34.432907)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gow2w"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m703f"]
 texture = ExtResource("5_1c242")
 0:0/size_in_atlas = Vector2i(4, 4)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-33.86843, -29.917116, 28.223694, -32.739487, 31.046066, -23.707905, 31.610535, 32.739487, -33.86843, 31.046059)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_acp53"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pdm4h"]
 texture = ExtResource("6_6ek2q")
 1:1/0 = 0
 1:2/0 = 0
@@ -307,7 +308,7 @@ texture = ExtResource("6_6ek2q")
 3:3/0 = 0
 0:3/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6kvf8"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gow2w"]
 texture = ExtResource("7_r25qe")
 0:0/size_in_atlas = Vector2i(4, 4)
 0:0/0 = 0
@@ -315,13 +316,13 @@ texture = ExtResource("7_r25qe")
 
 [sub_resource type="TileSet" id="TileSet_b3qvp"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_vh3n3")
-sources/1 = SubResource("TileSetAtlasSource_7t6j2")
-sources/2 = SubResource("TileSetAtlasSource_m703f")
-sources/3 = SubResource("TileSetAtlasSource_pdm4h")
-sources/4 = SubResource("TileSetAtlasSource_gow2w")
-sources/6 = SubResource("TileSetAtlasSource_acp53")
-sources/7 = SubResource("TileSetAtlasSource_6kvf8")
+sources/0 = SubResource("TileSetAtlasSource_7otsx")
+sources/1 = SubResource("TileSetAtlasSource_qx65y")
+sources/2 = SubResource("TileSetAtlasSource_vh3n3")
+sources/3 = SubResource("TileSetAtlasSource_7t6j2")
+sources/4 = SubResource("TileSetAtlasSource_m703f")
+sources/6 = SubResource("TileSetAtlasSource_pdm4h")
+sources/7 = SubResource("TileSetAtlasSource_gow2w")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nlk3l"]
 size = Vector2(146.25, 702)
@@ -354,6 +355,12 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cfg4s"]
 size = Vector2(56, 47.5)
+
+[sub_resource type="Theme" id="Theme_acp53"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6kvf8"]
+font_size = 40
+font_color = Color(0.40233842, 0.19927701, 0.098367326, 1)
 
 [node name="cat_world_2" type="Node2D" unique_id=1454054595]
 position = Vector2(12, 24)
@@ -494,5 +501,27 @@ position = Vector2(4256, -33)
 
 [node name="pick_up7" parent="Node" unique_id=1405382981 instance=ExtResource("24_cdr00")]
 position = Vector2(5006, 29)
+
+[node name="Node2" type="Node" parent="." unique_id=2002587415]
+
+[node name="Label3" type="Label" parent="Node2" unique_id=576275462]
+offset_left = 2122.0
+offset_top = -216.0
+offset_right = 2451.0
+offset_bottom = -87.0
+theme = SubResource("Theme_acp53")
+theme_override_fonts/font = ExtResource("25_i5ikr")
+text = "Short and sweet level"
+label_settings = SubResource("LabelSettings_6kvf8")
+
+[node name="Label2" type="Label" parent="Node2" unique_id=1457006557]
+offset_left = 5163.0
+offset_top = -73.0
+offset_right = 5436.0
+offset_bottom = 56.0
+theme = SubResource("Theme_acp53")
+theme_override_fonts/font = ExtResource("25_i5ikr")
+text = "Jump Here its safe"
+label_settings = SubResource("LabelSettings_6kvf8")
 
 [connection signal="body_entered" from="portal" to="portal" method="_on_body_entered"]
